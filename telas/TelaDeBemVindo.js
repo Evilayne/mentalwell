@@ -3,14 +3,12 @@ import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react
 
 export default function TelaDeBemVindo({ navigation }) {
   return (
-    <ImageBackground source={require('./assets/bemvindo.png')} style={styles.background}>
-      <View style={styles.container}>
-        <Text style={styles.titulo}>BEM-VINDO(A)</Text>
-        <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('PainelPrincipal')}>
-          <Text style={styles.botaoTexto}>Entrar</Text>
-        </TouchableOpacity>
-      </View>
-    </ImageBackground>
+    <View style={styles.container}>
+      <Text style={styles.titulo}>BEM-VINDO(A)</Text>
+      <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('PainelPrincipal')}>
+        <Text style={styles.botaoTexto}>Entrar</Text>
+      </TouchableOpacity>
+    </View>
   );
 }
 

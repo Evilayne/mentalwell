@@ -14,7 +14,7 @@ export default function PainelPrincipal({ navigation }) {
       <Text style={styles.titulo}>HOJE</Text>
       <Text style={styles.subtitulo}>BEM-VINDO(A) EDLAYNE!</Text>
 
-      <TouchableOpacity style={styles.botaoConsulta}>
+      <TouchableOpacity style={styles.botaoConsulta} onPress={() => navigation.navigate('AdicionarConsulta')}>
         <Text style={styles.botaoTexto}>Adicionar consulta</Text>
       </TouchableOpacity>
 
