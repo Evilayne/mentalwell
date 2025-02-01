@@ -1,52 +1,18 @@
-/*import React from 'react';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-//import TelaDetails from './TelaDetails';
+import { createStackNavigator } from '@react-navigation/stack';
+import TelaDeBemVindo from './TelaDeBemVindo';
+import PainelPrincipal from './PainelPrincipal';
 
-const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={TelaHome} />
-        <Drawer.Screen name="Details" component={TelaDetails} />
-      </Drawer.Navigator>
+      <Stack.Navigator initialRouteName="TelaDeBemVindo" screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="TelaDeBemVindo" component={TelaDeBemVindo} />
+        <Stack.Screen name="PainelPrincipal" component={PainelPrincipal} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
-} */
-  import React from 'react';
-  import { View, Image, StyleSheet } from 'react-native';
-  
-  export default function App() {
-    return (
-      <View style={styles.container}>
-        {/* Exemplo de imagem remota */}
-        <Image
-          source={{ uri: 'https://via.placeholder.com/150' }}
-          style={styles.image}
-        />
-  
-        {/* Exemplo de imagem local */}
-        <Image
-          source={require('./assets/exemplo.png')}
-          style={styles.image}
-        />
-      </View>
-    );
-  }
-  
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#FFF7F0',
-    },
-    image: {
-      width: 150,
-      height: 150,
-      marginBottom: 20,
-    },
-  });
-  
+}
