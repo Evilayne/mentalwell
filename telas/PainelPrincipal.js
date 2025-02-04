@@ -3,10 +3,10 @@ import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-nati
 
 export default function PainelPrincipal({ navigation }) {
   const consultas = [
-    { hora: '7 AM', paciente: 'Maria Oliveira' },
-    { hora: '8 AM', paciente: 'João Silva' },
-    { hora: '9 AM', paciente: 'Ana Souza' },
-    { hora: '10 AM', paciente: 'Carlos Pereira' },
+    { id: 1, hora: '7 AM', paciente: 'Maria Oliveira' },
+    { id: 2, hora: '8 AM', paciente: 'João Silva' },
+    { id: 3, hora: '9 AM', paciente: 'Ana Souza' },
+    { id: 4, hora: '10 AM', paciente: 'Carlos Pereira' },
   ];
 
   return (
@@ -19,11 +19,11 @@ export default function PainelPrincipal({ navigation }) {
       </TouchableOpacity>
 
       <ScrollView style={styles.lista}>
-        {consultas.map((consulta, index) => (
-          <View key={index} style={styles.consulta}>
+        {consultas.map((consulta) => (
+          <View key={consulta.id} style={styles.consulta}>
             <Text style={styles.hora}>{consulta.hora}</Text>
             <Text style={styles.paciente}>Consulta com {consulta.paciente}</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('PerfilPaciente', { paciente: consulta })}>
               <Text style={styles.verPerfil}>Ver perfil</Text>
             </TouchableOpacity>
           </View>
