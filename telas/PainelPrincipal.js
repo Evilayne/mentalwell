@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   botaoTexto: {
-    color: '#FFF',
+    color: '#8A5A44',//fff
     fontSize: 16,
   },
   lista: {
